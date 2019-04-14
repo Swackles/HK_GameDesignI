@@ -1,0 +1,27 @@
+extends layout
+
+block meta
+    meta(name="Name" content="Tetris")
+    meta(name="Description" content="A classical game of tetris, just with fewer mechanics")
+
+block script
+    script(src="javascripts/assets.js")
+    script(src="javascripts/controls.js")
+    script(src="javascripts/game.js")
+    script(src="javascripts/player.js")
+    script(src="javascripts/script.js")
+
+block content
+    container(style="display: flex;")
+        div(style="flex: 1 0 10%;")
+            input#drawGrid(type="checkbox")
+            p1 Grid
+            br
+            h1 Score:
+            h1#score 0
+            br
+            h1 Level:
+            h1#level 1
+            <canvas ></canvas>
+        div(style="flex: 1 0 90%;")
+            canvas#Canvas_1(width="300" height="600" style=" border: 1px solid rgb(0, 0, 0); margin-top: 100px")
